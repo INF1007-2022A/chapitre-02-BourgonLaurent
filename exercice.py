@@ -1,10 +1,13 @@
 #!/usr/bin/env python
+from typing import List
+
+
 def majuscule(mot: str) -> str:
     return "".join([chr(ord(char) - 32) for char in mot])
 
 
 if __name__ == "__main__":
-    mots: list[str] = [
+    mots: List[str] = [
         "riz",
         "cours",
         "voiture",
@@ -13,4 +16,4 @@ if __name__ == "__main__":
         "églantier",
         "arbre",
     ]
-    mots_majuscules: list[str] = [majuscule(mot) for mot in mots]
+    mots_majuscules: List[str] = [majuscule(mot) for mot in mots]
