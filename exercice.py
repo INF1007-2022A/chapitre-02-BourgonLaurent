@@ -1,21 +1,16 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
-def majuscule(mot):
-    # TODO completer la fonction ici
-    return mot
+def majuscule(mot: str) -> str:
+    return "".join([chr(ord(char) - 32) for char in mot])
 
 
-if __name__ == '__main__':
-    mots = [
-        'riz',
-        'cours',
-        'voiture',
-        'oiseau',
-        'bonjour',
-        'églantier',
-        'arbre'
+if __name__ == "__main__":
+    mots: list[str] = [
+        "riz",
+        "cours",
+        "voiture",
+        "oiseau",
+        "bonjour",
+        "églantier",
+        "arbre",
     ]
-    for i in range(len(mots)):
-        mots[i] = majuscule(mots[i])
-
-    print(mots)
+    mots_majuscules: list[str] = [majuscule(mot) for mot in mots]
